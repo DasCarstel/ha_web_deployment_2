@@ -1,7 +1,7 @@
 package com.example.ha_web_deployment_2.controller;
 
 import com.example.ha_web_deployment_2.models.GenericEntity;
-import com.example.ha_web_deployment_2.models.GenericRepository;
+import com.example.ha_web_deployment_2.repository.GenericRepository;
 import com.example.ha_web_deployment_2.services.GenericService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

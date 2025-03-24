@@ -1,7 +1,7 @@
 package com.example.ha_web_deployment_2.services;
 
 import com.example.ha_web_deployment_2.models.GenericEntity;
-import com.example.ha_web_deployment_2.models.GenericRepository;
+import com.example.ha_web_deployment_2.repository.GenericRepository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
