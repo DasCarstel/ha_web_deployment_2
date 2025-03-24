@@ -2,7 +2,7 @@ package com.example.ha_web_deployment_2.services;
 
 import com.example.ha_web_deployment_2.models.GenericEntity;
 import com.example.ha_web_deployment_2.models.GenericRepository;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.client.HttpClientErrorException;
@@ -21,7 +21,7 @@ public abstract class GenericService<T extends GenericEntity<T>> {
 
     public T get(Long id){
         return repository.findById(id).orElseThrow(
-                () -> new HttpClientErrorException.NotFound(id)
+                () -> new HttpClientErrorException(org.springframework.http.HttpStatus.NOT_FOUND)
         );
     }
 
