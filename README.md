@@ -1,10 +1,20 @@
 # Kino-API
 
 ## Überblick
+
+![Screenshot](/ha_web_deployment_2_screen.png)
+
 Dieses Projekt stellt eine REST-API für ein Kinomanagementsystem bereit. Es ermöglicht den Zugriff auf Daten zu Filmen, Gästen, Kinosälen, Tickets und Filmvorstellungen über standardisierte HTTP-Endpunkte im JSON-Format.
 
 ## Zweck
 Das Projekt wurde im Rahmen einer Hochschulaufgabe entwickelt, um ein Java-Web-Projekt mit Spring Boot zu erstellen, das eine API für den Datenbankzugriff bereitstellt. Die Anforderung bestand darin, mindestens zwei Schnittstellen zu implementieren, die Daten aus der Datenbank im XML oder JSON-Format per GET oder POST ausgeben können.
+
+## **HINWEIS FÜR DEN PROFESSOR**: 
+- Bei der Verwendung von NetBeans kann folgende Warnung auftreten:
+   "Can't initialize javac processor due to (most likely) a class loader problem: java.lang.NoClassDefFoundError: Could not initialize class lombok.javac.Javac"
+- Diese Warnung ist ein bekanntes Problem zwischen NetBeans und Lombok und tritt nach der Migration von IntelliJ auf
+- Der Code ist trotz dieser Warnung voll funktions- und ausführbar
+- Es handelt sich um eine Kompatibilitätsproblematik zwischen dem NetBeans Java-Compiler und Lombok-Annotationsverarbeitung
 
 ## Technologien
 - Java 21
