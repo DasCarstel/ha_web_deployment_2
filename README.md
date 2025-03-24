@@ -51,6 +51,46 @@ Das Projekt folgt einer sauberen, mehrschichtigen Architektur:
 
 Der generische Ansatz mit `GenericEntity`, `GenericRepository`, `GenericService` und `GenericController` reduziert Code-Redundanz erheblich.
 
+## Projektstruktur
+```
+ha_web_deployment_2/
+├── pom.xml                              # Maven-Konfiguration
+├── src/
+│   ├── main/
+│   │   ├── java/com/example/ha_web_deployment_2/
+│   │   │   ├── HaWebDeployment2Application.java     # Hauptklasse
+│   │   │   ├── ServletInitializer.java              # Servlet-Konfiguration
+│   │   │   ├── controller/                          # REST-API Controller
+│   │   │   │   ├── FilmController.java
+│   │   │   │   ├── GastController.java
+│   │   │   │   ├── GenericController.java           # Generischer Controller
+│   │   │   │   ├── SaalController.java
+│   │   │   │   ├── TicketController.java
+│   │   │   │   └── VorstellungController.java
+│   │   │   ├── models/                              # Entitätsklassen
+│   │   │   │   ├── Film.java
+│   │   │   │   ├── Gast.java
+│   │   │   │   ├── GenericEntity.java               # Interface für Entitäten
+│   │   │   │   ├── Saal.java
+│   │   │   │   ├── Ticket.java
+│   │   │   │   └── Vorstellung.java
+│   │   │   ├── repository/                          # Datenzugriffs-Layer
+│   │   │   │   ├── FilmRepository.java
+│   │   │   │   ├── GastRepository.java
+│   │   │   │   ├── GenericRepository.java           # Generisches Repository
+│   │   │   │   ├── SaalRepository.java
+│   │   │   │   ├── TicketRepository.java
+│   │   │   │   └── VorstellungRepository.java
+│   │   │   └── services/                            # Service-Layer
+│   │   │       └── GenericService.java              # Generischer Service
+│   │   └── resources/
+│   │       └── application.properties               # Anwendungskonfiguration
+│   └── test/
+│       └── java/com/example/ha_web_deployment_2/
+│           └── HaWebDeployment2ApplicationTests.java # Test-Klasse
+└── .idea/                                # IDE-Konfiguration
+```
+
 ## Installation und Start
 1. Klonen Sie das Repository
 2. Konfigurieren Sie die Datenbankverbindung in `application.properties`
