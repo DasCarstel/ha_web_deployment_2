@@ -98,3 +98,23 @@ ha_web_deployment_2/
 4. Starten Sie die Anwendung mit `mvn spring-boot:run`
 
 Die API ist dann unter `http://localhost:8080/api/` erreichbar.
+
+## Wichtige Konfigurationsschritte für Apache NetBeans
+
+Um das Projekt in Apache NetBeans korrekt als Spring Boot-Anwendung auszuführen, befolgen Sie die folgenden Schritte:
+
+1. **Maven Build und Clean durchführen:**
+   - Rechtsklick auf das Projekt
+   - Wählen Sie "Clean and Build" oder führen Sie Maven-Goals `clean install` aus
+
+2. **JDK 21 konfigurieren:**
+   - Rechtsklick auf das Projekt
+   - Wählen Sie "Properties" (Eigenschaften)
+   - Gehen Sie zu "Build" > "Compile"
+   - Stellen Sie sicher, dass JDK 21 als Java-Plattform ausgewählt ist
+
+3. **Hauptklasse konfigurieren:**
+   - Rechtsklick auf das Projekt
+   - Wählen Sie "Properties" (Eigenschaften)
+   - Gehen Sie zu "Run"
+   - Setzen Sie als Main Class: `com.example.ha_web_deployment_2.HaWebDeployment2Application`
