@@ -1,5 +1,6 @@
-package com.example.ha_web_deployment_2.models;
+package com.example.ha_web_deployment_2.repository;
 
+import com.example.ha_web_deployment_2.models.GenericEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
